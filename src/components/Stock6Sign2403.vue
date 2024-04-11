@@ -1,5 +1,5 @@
 <script setup>
-import { ref, reactive } from 'vue'
+import { ref } from 'vue'
 
 const inputText2 = ref('測試!')
 const result2 = ref('')
@@ -11,7 +11,7 @@ defineProps({
   }
 })
 
-async function handleSubmit() {
+function handleSubmit() {
   result2.value = `https://stock6-restfulex.onrender.com/api/Stock6Sign202402/getstockinfo/${inputText2.value}`
 
   console.log(`最新得到網址為${result2.value}`)
