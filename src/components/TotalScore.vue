@@ -1,5 +1,5 @@
 <template>
-  <div v-if="cSign1">
+  <div v-if="cStockName">
     <table
       border="2"
       cellpadding="1"
