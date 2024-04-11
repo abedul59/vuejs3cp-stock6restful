@@ -1,9 +1,9 @@
 <script setup>
-import TheWelcome from '../components/TheWelcome.vue'
+import Stock6Sign2403 from '../components/Stock6Sign2403.vue'
 </script>
 
 <template>
   <main>
-    <TheWelcome />
+    <Stock6Sign2403 />
   </main>
 </template>
