@@ -19,8 +19,10 @@ function handleSubmit() {
     .then((data) => data.json())
     .then((response) => {
       const { cStockName, cNewestSeason } = response
+      const stock6data2 = response
       console.log(cStockName)
       console.log(cNewestSeason)
+      console.log(stock6data2)
     })
 }
 </script>
@@ -36,4 +38,6 @@ function handleSubmit() {
     </div>
   </div>
   <br />
+
+  <total-score v-bind="stock6data2"></total-score>
 </template>
