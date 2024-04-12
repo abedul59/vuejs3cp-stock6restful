@@ -29,15 +29,13 @@ function handleSubmit() {
 
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
-
     <input type="text" v-model="inputText2" placeholder="輸入台股代號" />
     <button @click="handleSubmit">Submit</button>
     <div v-if="result2">
       <p>Result2: {{ result2 }}</p>
     </div>
     <br />
-    <div v-if="result2">
+    <div v-if="cStockName">
       <p>股票名稱: {{ cStockName }}</p>
     </div>
   </div>
