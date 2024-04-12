@@ -127,7 +127,7 @@ export default {
   props: ['cStockName', 'cNewestSeason'],
   setup(props) {
     const { cStockName, cNewestSeason } = toRefs(props)
-    console.log(cStockName, cNewestSeason)
+    console.log(cStockName.value, cNewestSeason.value)
   }
 }
 </script>

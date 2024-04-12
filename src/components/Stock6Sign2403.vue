@@ -1,5 +1,5 @@
 <script setup>
-import { ref, reactive } from 'vue'
+import { ref, reactive, toRefs } from 'vue'
 
 const inputText2 = ref('測試!')
 const result2 = ref('')
@@ -18,11 +18,11 @@ function handleSubmit() {
   fetch(result2.value)
     .then((data) => data.json())
     .then((response) => {
-      const { cStockName, cNewestSeason } = response
+      const { cStockName, cNewestSeason } = toRefs(response)
       const stock6data2 = reactive(response)
-      console.log(cStockName)
-      console.log(cNewestSeason)
-      console.log(stock6data2)
+      console.log(cStockName.value)
+      console.log(cNewestSeason.value)
+      console.log(stock6data2.value)
     })
 }
 </script>
