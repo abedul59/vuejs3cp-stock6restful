@@ -38,7 +38,7 @@ function handleSubmit() {
     </div>
     <br />
     <div v-if="result2">
-      <p>股票名稱: {{ cStockName.value }}</p>
+      <p>股票名稱: {{ cStockName }}</p>
     </div>
   </div>
   <br />
