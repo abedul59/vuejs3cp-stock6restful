@@ -4,6 +4,7 @@ import { ref, toRefs, reactive } from 'vue'
 const inputText2 = ref('測試!')
 const result2 = ref('')
 const stock6data2 = ref({})
+console.log(stock6data2)
 
 defineProps({
   msg: {
@@ -36,10 +37,8 @@ function handleSubmit() {
     <div v-if="result2">
       <p>Result2: {{ result2 }}</p>
 
-      <p>股票名稱: {{ response.cStockName }}</p>
+      <p>股票名稱: {{ cStockName }}</p>
     </div>
   </div>
   <br />
-
-  <total-score v-bind="stock6data2"></total-score>
 </template>
