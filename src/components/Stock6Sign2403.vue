@@ -36,6 +36,10 @@ function handleSubmit() {
     <div v-if="result2">
       <p>Result2: {{ result2 }}</p>
     </div>
+    <br />
+    <div v-if="cStockName">
+      <p>股票名稱: {{ cStockName }}</p>
+    </div>
   </div>
   <br />
 
