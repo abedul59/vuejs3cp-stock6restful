@@ -3,7 +3,7 @@ import { ref } from 'vue'
 
 const inputText2 = ref('測試!')
 const result2 = ref('')
-
+const stock6data2 = ref({})
 defineProps({
   msg: {
     type: String,
@@ -19,7 +19,7 @@ function handleSubmit() {
     .then((data) => data.json())
     .then((response) => {
       const { cStockName, cNewestSeason } = response
-      const stock6data2 = response
+      stock6data2.value = response
       console.log(cStockName)
       console.log(cNewestSeason)
       console.log(stock6data2)
