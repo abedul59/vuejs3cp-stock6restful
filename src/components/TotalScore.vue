@@ -122,45 +122,16 @@
   </div>
 </template>
 
-<script setup>
-defineProps({
-  inputText2: {
-    type: String,
-    required: true
-  },
-  cStockName: {
-    type: String,
-    required: true
-  },
-  cNewestSeason: {
-    type: String,
-    required: true
-  },
-  cSign1: {
-    type: String,
-    required: true
-  },
-  cSign2: {
-    type: String,
-    required: true
-  },
-  cSign3: {
-    type: String,
-    required: true
-  },
-  cSign4: {
-    type: String,
-    required: true
-  },
-  cSign5: {
-    type: String,
-    required: true
-  },
-  cSign6: {
-    type: String,
-    required: true
+<script>
+import { toRefs } from 'vue'
+
+export default {
+  props: ['cStockName', 'cNewestSeason'],
+  setup(props) {
+    const { cStockName, cNewestSeason } = toRefs(props)
+    console.log(cStockName.value, cNewestSeason.value)
   }
-})
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
