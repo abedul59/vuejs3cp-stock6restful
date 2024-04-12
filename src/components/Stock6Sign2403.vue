@@ -1,5 +1,5 @@
 <script setup>
-import { ref, toRefs } from 'vue'
+import { ref, toRefs, unref } from 'vue'
 
 const inputText2 = ref('測試!')
 const result2 = ref('')
@@ -21,9 +21,10 @@ function handleSubmit() {
     .then((response) => {
       const { cStockName, cNewestSeason } = toRefs(response)
       const stock6data2 = ref(response)
+      const stock6data3 = unref(stock6data2)
       console.log(cStockName.value)
       console.log(cNewestSeason.value)
-      console.log(stock6data2)
+      console.log(stock6data3)
     })
 }
 </script>
