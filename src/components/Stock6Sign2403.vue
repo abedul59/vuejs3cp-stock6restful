@@ -1,9 +1,9 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, reactive } from 'vue'
 
 const inputText2 = ref('測試!')
 const result2 = ref('')
-const stock6data2 = ref({})
+
 defineProps({
   msg: {
     type: String,
@@ -19,7 +19,7 @@ function handleSubmit() {
     .then((data) => data.json())
     .then((response) => {
       const { cStockName, cNewestSeason } = response
-      stock6data2.value = response
+      const stock6data2 = reactive(response)
       console.log(cStockName)
       console.log(cNewestSeason)
       console.log(stock6data2)
