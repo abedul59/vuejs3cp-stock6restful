@@ -1,5 +1,5 @@
 <script setup>
-import { ref, toRefs, unref, reactive } from 'vue'
+import { ref, toRefs, reactive } from 'vue'
 
 const inputText2 = ref('測試!')
 const result2 = ref('')
@@ -21,10 +21,10 @@ function handleSubmit() {
     .then((response) => {
       const { cStockName, cNewestSeason } = toRefs(response)
       const stock6data2 = reactive(response)
-      const stock6data3 = unref(stock6data2)
+
       console.log(cStockName.value)
       console.log(cNewestSeason.value)
-      console.log(stock6data3)
+      console.log(stock6data2)
     })
 }
 </script>
@@ -35,9 +35,7 @@ function handleSubmit() {
     <button @click="handleSubmit">Submit</button>
     <div v-if="result2">
       <p>Result2: {{ result2 }}</p>
-    </div>
-    <br />
-    <div v-if="cStockName">
+
       <p>股票名稱: {{ response.cStockName }}</p>
     </div>
   </div>
