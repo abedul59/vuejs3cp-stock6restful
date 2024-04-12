@@ -22,7 +22,7 @@ function handleSubmit() {
       const stock6data2 = reactive(response)
       console.log(cStockName.value)
       console.log(cNewestSeason.value)
-      console.log(stock6data2.value)
+      console.log(stock6data2)
     })
 }
 </script>
@@ -38,7 +38,7 @@ function handleSubmit() {
     </div>
     <br />
     <div v-if="result2">
-      <p>股票名稱: {{ cStockName }}</p>
+      <p>股票名稱: {{ cStockName.value }}</p>
     </div>
   </div>
   <br />
