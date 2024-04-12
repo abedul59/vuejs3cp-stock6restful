@@ -3,6 +3,7 @@ import { ref, toRefs } from 'vue'
 
 const inputText2 = ref('測試!')
 const result2 = ref('')
+const stock6data2 = ref({})
 
 defineProps({
   msg: {
