@@ -120,16 +120,13 @@
   </table>
 </template>
 
-<script>
-import { toRefs } from 'vue'
-
-export default {
-  props: ['cStockName', 'cNewestSeason'],
-  setup(props) {
-    const { cStockName, cNewestSeason } = toRefs(props)
-    console.log(cStockName.value, cNewestSeason.value)
+<script setup>
+defineProps({
+  cStockName: {
+    type: String,
+    required: true
   }
-}
+})
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
