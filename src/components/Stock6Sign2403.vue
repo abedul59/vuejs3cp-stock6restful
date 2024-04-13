@@ -7,7 +7,7 @@ const result2 = ref('')
 
 const tStockName = ref('')
 const tNewestSeason = ref('')
-const tStock6data2 = ref({})
+const tStock6data2 = ref({}) //tStock6data2為restful傳遞來的物件
 
 defineProps({
   msg: {
@@ -27,6 +27,8 @@ function handleSubmit() {
       tStockName.value = cStockName
       tNewestSeason.value = cNewestSeason
       tStock6data2.value = response
+
+      console.log(response)
 
       console.log(tStockName.value)
       console.log(tNewestSeason.value)
