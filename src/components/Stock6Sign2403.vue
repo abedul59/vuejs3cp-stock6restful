@@ -1,10 +1,10 @@
 <script setup>
-import { ref, toRefs, reactive, unRef } from 'vue'
+import { ref, reactive } from 'vue'
 
 const inputText2 = ref('測試!')
 const result2 = ref('')
 const stock6data2 = reactive({})
-const c2StockName = ref('')
+const cStockName = ref('')
 console.log(stock6data2)
 
 defineProps({
@@ -21,11 +21,12 @@ function handleSubmit() {
   fetch(result2.value)
     .then((data) => data.json())
     .then((response) => {
-      const { cStockName, cNewestSeason } = toRefs(response)
-      c2StockName.value = unRef(cStockName)
+      const { cStockName, cNewestSeason } = response
+      cStockName.value = cStockName
+
       const stock6data2 = reactive(response)
 
-      console.log(c2StockName.value)
+      console.log(cStockName)
       console.log(cNewestSeason.value)
       console.log(stock6data2)
     })
@@ -39,7 +40,7 @@ function handleSubmit() {
     <div v-if="result2">
       <p>Result2: {{ result2 }}</p>
 
-      <p>股票名稱: {{ c2StockName }}</p>
+      <p>股票名稱: {{ cStockName }}</p>
     </div>
   </div>
   <br />
