@@ -5,6 +5,7 @@ const inputText2 = ref('測試!')
 const result2 = ref('')
 const stock6data2 = reactive({})
 const cStockName2 = ref('')
+const cNewestSeason2 = ref('')
 console.log(stock6data2)
 
 defineProps({
@@ -23,11 +24,12 @@ function handleSubmit() {
     .then((response) => {
       const { cStockName, cNewestSeason } = response
       cStockName2.value = cStockName
+      cNewestSeason2.value = cNewestSeason
 
       const stock6data2 = reactive(response)
 
       console.log(cStockName2.value)
-      console.log(cNewestSeason.value)
+      console.log(cNewestSeason2.value)
       console.log(stock6data2)
     })
 }
@@ -40,7 +42,7 @@ function handleSubmit() {
     <div v-if="result2">
       <p>Result2: {{ result2 }}</p>
 
-      <p>股票名稱: {{ cStockName }}</p>
+      <p>股票名稱: {{ cStockName2 }}</p>
     </div>
   </div>
   <br />
