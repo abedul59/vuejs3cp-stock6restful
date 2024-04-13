@@ -122,11 +122,9 @@
 
 <script setup>
 const props = defineProps({
-  stock6data2: {
-    type: Object
-  }
+  cStockName: String,
+  cNewestSeason: String
 })
-console.log(props.cStockName)
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
