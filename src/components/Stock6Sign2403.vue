@@ -4,8 +4,8 @@ import { ref, reactive } from 'vue'
 const inputText2 = ref('測試!')
 const result2 = ref('')
 const stock6data2 = reactive({})
-const cStockName2 = ref('')
-const cNewestSeason2 = ref('')
+const tStockName = ref('')
+const tNewestSeason = ref('')
 console.log(stock6data2)
 
 defineProps({
@@ -23,13 +23,13 @@ function handleSubmit() {
     .then((data) => data.json())
     .then((response) => {
       const { cStockName, cNewestSeason } = response
-      cStockName2.value = cStockName
-      cNewestSeason2.value = cNewestSeason
+      tStockName.value = cStockName
+      tNewestSeason.value = cNewestSeason
 
-      const stock6data2 = reactive(response)
+      const stock6data2 = response
 
-      console.log(cStockName2.value)
-      console.log(cNewestSeason2.value)
+      console.log(tStockName.value)
+      console.log(tNewestSeason.value)
       console.log(stock6data2)
     })
 }
@@ -42,7 +42,8 @@ function handleSubmit() {
     <div v-if="result2">
       <p>Result2: {{ result2 }}</p>
 
-      <p>股票名稱: {{ cStockName2 }}</p>
+      <p>股票名稱: {{ tStockName }}</p>
+      <p>最新財報季度: {{ tNewestSeason }}</p>
     </div>
   </div>
   <br />
