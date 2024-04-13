@@ -27,7 +27,7 @@ function handleSubmit() {
       tStockName.value = cStockName
       tNewestSeason.value = cNewestSeason
 
-      const stock6data2 = response
+      const stock6data2 = reactive(response)
 
       console.log(tStockName.value)
       console.log(tNewestSeason.value)

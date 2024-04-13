@@ -25,7 +25,7 @@
       </td>
       <td align="center">
         <div>
-          <FONT SIZE="7">{{ props.cStockName }}</FONT>
+          <FONT SIZE="7">{{ cStockName }}</FONT>
         </div>
       </td>
     </tr>
@@ -121,7 +121,7 @@
 </template>
 
 <script setup>
-const props = defineProps({
+defineProps({
   cStockName: String,
   cNewestSeason: String
 })
