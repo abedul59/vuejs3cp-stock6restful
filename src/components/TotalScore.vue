@@ -25,7 +25,7 @@
       </td>
       <td align="center">
         <div>
-          <FONT SIZE="7">{{ cStockName }}</FONT>
+          <FONT SIZE="7">{{ tStockName }}</FONT>
         </div>
       </td>
     </tr>
@@ -121,12 +121,16 @@
 </template>
 
 <script setup>
-defineProps({
+import { ref } from 'vue'
+const prop = defineProps({
   cStockName: {
-    type: String,
-    required: true
+    type: String
   }
 })
+
+const tStockName = ref('')
+console.log(tStockName)
+tStockName.value = prop.cStockName
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
