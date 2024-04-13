@@ -21,8 +21,8 @@ function handleSubmit() {
   fetch(result2.value)
     .then((data) => data.json())
     .then((response) => {
-      const { cStockName2, cNewestSeason } = toRefs(response)
-      cStockName.value = cStockName2
+      const { cStockName, cNewestSeason } = toRefs(response)
+      cStockName.value = cStockName
       const stock6data2 = reactive(response)
 
       console.log(cStockName.value)
