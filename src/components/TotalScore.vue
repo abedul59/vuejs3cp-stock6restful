@@ -126,7 +126,7 @@ const props = defineProps({
     type: Object
   }
 })
-console.Log(props.cStockName)
+console.log(props.cStockName)
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
