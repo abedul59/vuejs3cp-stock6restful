@@ -4,10 +4,10 @@ import { ref, reactive } from 'vue'
 
 const inputText2 = ref('測試!')
 const result2 = ref('')
-const stock6data2 = reactive({})
+
 const tStockName = ref('')
 const tNewestSeason = ref('')
-console.log(stock6data2)
+const tStock6data2 = reactive({})
 
 defineProps({
   msg: {
@@ -26,12 +26,11 @@ function handleSubmit() {
       const { cStockName, cNewestSeason } = response
       tStockName.value = cStockName
       tNewestSeason.value = cNewestSeason
-
-      const stock6data2 = reactive(response)
+      tStock6data2.value = response
 
       console.log(tStockName.value)
       console.log(tNewestSeason.value)
-      console.log(stock6data2)
+      console.log(tStock6data2.value)
     })
 }
 </script>
@@ -49,5 +48,5 @@ function handleSubmit() {
   </div>
   <br />
 
-  <total-score v-bind="stock6data2"></total-score>
+  <total-score v-bind="tStock6data2"></total-score>
 </template>
