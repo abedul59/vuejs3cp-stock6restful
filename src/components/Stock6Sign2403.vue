@@ -1,13 +1,13 @@
 <script setup>
 import TotalScore from './TotalScore.vue'
-import { ref, reactive } from 'vue'
+import { ref } from 'vue'
 
 const inputText2 = ref('測試!')
 const result2 = ref('')
 
 const tStockName = ref('')
 const tNewestSeason = ref('')
-const tStock6data2 = reactive({})
+const tStock6data2 = ref({})
 
 defineProps({
   msg: {
