@@ -4,7 +4,7 @@ import { ref, reactive } from 'vue'
 const inputText2 = ref('測試!')
 const result2 = ref('')
 const stock6data2 = reactive({})
-const cStockName = ref('')
+const cStockName2 = ref('')
 console.log(stock6data2)
 
 defineProps({
@@ -22,11 +22,11 @@ function handleSubmit() {
     .then((data) => data.json())
     .then((response) => {
       const { cStockName, cNewestSeason } = response
-      cStockName.value = cStockName
+      cStockName2.value = cStockName
 
       const stock6data2 = reactive(response)
 
-      console.log(cStockName)
+      console.log(cStockName2.value)
       console.log(cNewestSeason.value)
       console.log(stock6data2)
     })
