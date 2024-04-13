@@ -122,7 +122,7 @@
 
 <script setup>
 import { ref } from 'vue'
-const prop = defineProps({
+const props = defineProps({
   cStockName: {
     type: String
   }
@@ -130,7 +130,7 @@ const prop = defineProps({
 
 const tStockName = ref('')
 console.log(tStockName)
-tStockName.value = prop.cStockName
+tStockName.value = props.cStockName
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
