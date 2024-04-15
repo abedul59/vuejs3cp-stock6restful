@@ -2,6 +2,10 @@
 import TotalScore from './TotalScore.vue'
 import StockS1gn from './StockS1gn.vue'
 import StockS2gn from './StockS2gn.vue'
+import StockS3gn from './StockS3gn.vue'
+import StockS4gn from './StockS4gn.vue'
+import StockS5gn from './StockS5gn.vue'
+import StockS6gn from './StockS6gn.vue'
 import { ref } from 'vue'
 
 const inputText2 = ref('測試!')
@@ -57,4 +61,12 @@ function handleSubmit() {
   <stock-s1gn v-bind="tStock6data2"></stock-s1gn>
   <br />
   <stock-s2gn v-bind="tStock6data2"></stock-s2gn>
+  <br />
+  <stock-s3gn v-bind="tStock6data2"></stock-s3gn>
+  <br />
+  <stock-s4gn v-bind="tStock6data2"></stock-s4gn>
+  <br />
+  <stock-s5gn v-bind="tStock6data2"></stock-s5gn>
+  <br />
+  <stock-s6gn v-bind="tStock6data2"></stock-s6gn>
 </template>
