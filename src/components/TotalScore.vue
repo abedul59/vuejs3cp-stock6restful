@@ -15,7 +15,7 @@
       </td>
       <td align="center">
         <div>
-          <FONT SIZE="7">{{ id }}</FONT>
+          <FONT SIZE="7">{{ cStockID }}</FONT>
         </div>
       </td>
     </tr>
