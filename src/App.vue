@@ -6,10 +6,10 @@ import HelloWorld from './components/HelloWorld.vue'
 <template>
   <header>
     <div class="wrapper">
-      <HelloWorld msg="You did it successfully!" />
+      <HelloWorld msg="Welcome here!" />
 
       <nav>
-        <RouterLink to="/">Home</RouterLink>
+        <RouterLink to="/">2024年4月六大指標</RouterLink>
         <RouterLink to="/about">About</RouterLink>
       </nav>
     </div>

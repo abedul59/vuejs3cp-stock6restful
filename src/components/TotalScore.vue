@@ -123,7 +123,7 @@
 
 <script setup>
 defineProps({
-  id: String,
+  cStockID: String,
   cStockName: String,
   cNewestSeason: String,
   cSign1: String,
