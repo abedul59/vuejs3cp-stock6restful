@@ -1,5 +1,6 @@
 <script setup>
 import TotalScore from './TotalScore.vue'
+import StockS1gn from './StockS1gn.vue'
 import { ref } from 'vue'
 
 const inputText2 = ref('測試!')
@@ -51,4 +52,6 @@ function handleSubmit() {
   <br />
 
   <total-score v-bind="tStock6data2"></total-score>
+  <br />
+  <stock-s1gn v-bind="tStock6data2"></stock-s1gn>
 </template>
