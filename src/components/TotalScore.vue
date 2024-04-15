@@ -1,4 +1,5 @@
 <template>
+  <div v-if="cStockName"></div>
   <table
     border="2"
     cellpadding="1"
