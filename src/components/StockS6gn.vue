@@ -167,6 +167,7 @@ defineProps({
   cf4N: String,
   cf5N: String,
   cf6N: String,
+  cf7N: String,
   cf8N: String,
 
   cf1: String,

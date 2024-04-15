@@ -30,7 +30,16 @@
         </div>
       </td>
     </tr>
-
+    <tr>
+      <td style="background-color: #d3a4ff" align="center">
+        <div><FONT SIZE="7">最新營收月份：</FONT></div>
+      </td>
+      <td align="center">
+        <div>
+          <FONT SIZE="7">{{ cNewestRev }}</FONT>
+        </div>
+      </td>
+    </tr>
     <tr>
       <td style="background-color: #d3a4ff" align="center">
         <div><FONT SIZE="7">最新財報季度：</FONT></div>
@@ -114,7 +123,7 @@
       </td>
       <td align="center">
         <div>
-          <FONT SIZE="7">{{ average6stock }}</FONT>
+          <FONT SIZE="7">{{ cAverageScore }}</FONT>
         </div>
       </td>
     </tr>
@@ -125,13 +134,15 @@
 defineProps({
   cStockID: String,
   cStockName: String,
+  cNewestRev: String,
   cNewestSeason: String,
   cSign1: String,
   cSign2: String,
   cSign3: String,
   cSign4: String,
   cSign5: String,
-  cSign6: String
+  cSign6: String,
+  cAverageScore: String
 })
 </script>
 
