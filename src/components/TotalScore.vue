@@ -14,7 +14,7 @@
       </td>
       <td align="center">
         <div>
-          <FONT SIZE="7">{{ inputText2 }}</FONT>
+          <FONT SIZE="7">{{ id }}</FONT>
         </div>
       </td>
     </tr>
@@ -122,6 +122,7 @@
 
 <script setup>
 defineProps({
+  id: String,
   cStockName: String,
   cNewestSeason: String,
   cSign1: String,
