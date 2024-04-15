@@ -8,7 +8,7 @@ import StockS5gn from './StockS5gn.vue'
 import StockS6gn from './StockS6gn.vue'
 import { ref } from 'vue'
 
-const inputText2 = ref('測試!')
+const inputText2 = ref('')
 const result2 = ref('')
 
 const tStockName = ref('')
@@ -45,7 +45,7 @@ function handleSubmit() {
 
 <template>
   <div class="hello">
-    <input type="text" v-model="inputText2" placeholder="輸入台股代號" />
+    <input type="text" v-model="inputText2" placeholder="請輸入台股代號" />
     <button @click="handleSubmit">Submit</button>
     <div v-if="result2">
       <p>Result2: {{ result2 }}</p>
