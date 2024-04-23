@@ -41,6 +41,8 @@ function handleSubmit() {
       console.log(tStock6data2.value)
     })
 }
+
+
 </script>
 
 <template>

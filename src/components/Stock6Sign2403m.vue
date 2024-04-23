@@ -29,10 +29,10 @@ function handleSubmit() {
   fetch(result2.value)
     .then((data) => data.json())
     .then((response) => {
-      const { cStockName, cNewestSeason } = response
+      const { cStockName, cNewestSeason } = response.data
       tStockName.value = cStockName
       tNewestSeason.value = cNewestSeason
-      tStock6data2.value = response
+      tStock6data2.value = response.data
 
       console.log(response)
 
