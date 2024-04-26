@@ -21,6 +21,11 @@ const router = createRouter({
       path: '/Stock6Sign2403fm',
       name: 'Stock6Sign2403fm',
       component: () => import('../views/HomeViewfm.vue')
+    },
+    {
+      path: '/Stock6Sign2403go',
+      name: 'Stock6Sign2403go',
+      component: () => import('../views/HomeViewgo.vue')
     }
   ]
 })

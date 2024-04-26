@@ -12,6 +12,7 @@ import HelloWorld from './components/HelloWorld.vue'
         <RouterLink to="/">2024年4月六大指標</RouterLink>
         <RouterLink to="/about">About</RouterLink>
         <RouterLink to="/Stock6Sign2403fm">2024年4月六大指標fm</RouterLink>
+        <RouterLink to="/Stock6Sign2403go">2024年4月六大指標go</RouterLink>
       </nav>
     </div>
   </header>
